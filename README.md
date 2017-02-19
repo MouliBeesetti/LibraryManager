@@ -9,16 +9,7 @@ A PHP web application for maintaining collage Library...
 - Set the connection parameters in connection.php
 - set below coloumns in the table users
 
-Name        Type					  Null	Default			Extra           <br/>
-id          int(11)					No		None			AUTO_INCREMENT    <br/>
-userlevel		varchar(100)		No		student	                    <br/>
-username		varchar(100)		No		None	                      <br/>
-password		text					  Yes		NULL                        <br/>
-firstname		text					  Yes		NULL	                      <br/>
-lastname		text					  Yes		NULL                        <br/>
-email			  varchar(150)		Yes		NULL                        <br/>
-mobile			varchar(100)		Yes		NULL	                      <br/>
-
+<br/>
 <table style="width:100%">
   <tr>
     <th>Name</th>
@@ -39,6 +30,7 @@ mobile			varchar(100)		Yes		NULL	                      <br/>
     <td>varchar(100)</td>
     <td>No</td>
     <td>student</td>
+    <td>''</td>
   </tr>
   <tr>
     <td>username </td>
