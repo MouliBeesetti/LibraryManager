@@ -9,8 +9,8 @@ A PHP web application for maintaining collage Library...
 - Set the connection parameters in connection.php
 - set below coloumns in the table users
 
-Name			  Type					  Null	Default			Extra           <br/>
-idPrimary		int(11)					No		None			AUTO_INCREMENT    <br/>
+Name        Type					  Null	Default			Extra           <br/>
+idPrimary   int(11)					No		None			AUTO_INCREMENT    <br/>
 userlevel		varchar(100)		No		student	                    <br/>
 username		varchar(100)		No		None	                      <br/>
 password		text					  Yes		NULL                        <br/>
