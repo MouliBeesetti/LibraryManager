@@ -4,8 +4,10 @@
 	<title>Library Manager</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+
 	
 
 	<header>
@@ -14,13 +16,14 @@
 	</h1>
 	</header>
 	<article>
-	
-        <form method= "post" action="index.php">
-			<input type = "varchar" name= "username" placeholder="Username"><br/>
-			<input type = "password" name= "password" placeholder="Password"><br/>
-			<button name = "login" type = "submit">Login</button>&nbsp
-			<a href="signup.php">New User?</a>&nbsp
-		</form>
+		<div class="formbg">
+			<form method= "post" action="index.php" enctype="multipart/form-data" autocomplete="off">
+				<input type = "varchar" name= "username" placeholder="Username"><br/>
+				<input type = "password" name= "password" placeholder="Password"><br/>
+				<button name = "login" type = "submit">Login</button>&nbsp
+				<a href="signup.php">New User?</a>&nbsp
+			</form>
+		
 <?php
 if(isset($_POST['login'])){
 	
@@ -48,6 +51,7 @@ if(password_verify($password,$hashed_password)){
 mysqli_close($conn);
 }}
 ?>
+	</div>
     </article>
     <aside>
 

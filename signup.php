@@ -42,7 +42,8 @@ mysqli_close($conn);
 	</h1>
 </header>
 <body>
-<form action="signup.php" method="post">
+<div class="formbg">
+<form action="signup.php" method="post" autocomplete="off" >
 			<input type = "varchar" name= "username" placeholder="Username" required><br/>
 			<input type = "password" name= "password" placeholder="Password" required><br/>
 			<input type = "password" name= "confirmpassword" placeholder="Confirm Password" required><br/>
@@ -53,6 +54,7 @@ mysqli_close($conn);
 			<button type = "submit" value="submit">Sign up</button>&nbsp
 			<div class="alert"><?= $_SESSION['message'] ?></div>
 </form>
+</div>
 	<footer>
 	<?php	
 		include("links.php");	

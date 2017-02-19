@@ -1,8 +1,82 @@
+@font-face{
+	
+	font-family:bungee;
+	src : url("../fonts/bungee/Bungee-Regular.otf");
+	
+}
 
-button[name="login"] { 
-width:80px;
-border-radius: 4px;
-margin: 10px 5px;
-background: #4286f4;
-color:#ffffff
+
+
+body{
+  background-color:#f0f0f0;
+  background-image: url("../images/bg.jpg");
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:cover;
+  color: #fff;
+  margin: 20px 20px;
+  text-align:center;
+}
+
+header{
+	font-family: bungee, sans-serif;
+	text-align: center;
+	color:#ffc857;
+	margin:3px;
+	
+}
+
+
+article{
+	text-align: center;
+	
+}
+
+footer{
+	
+	text-align: center;
+	color:#ffe1a8;
+	
+}
+
+button,a{ 
+	text-decoration: none;
+	width:80px;
+	border-radius: 4px;
+	margin: 10px 5px;
+	background: #e26d5c;
+	color:#ffe1a8;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border: 3px inset #031926;
+	padding:3px 5px;
+	font-size:0.875em;
+	cursor:pointer;
+	text-align:center;
+	
+}
+
+.formbg{
+	display: inline-block;
+	background: rgba(202, 204, 164, 0.8);
+	margin: 10px;
+	padding:20px;
+	width:250px;
+	border-radius: 12px;
+	text-align: center;
+	border: 8px inset #031926;
+}
+
+.formbg input{
+	
+	padding:5px 5px;
+	margin:5px;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 20px;
+	font-size:1em;
+	
+	
 }
