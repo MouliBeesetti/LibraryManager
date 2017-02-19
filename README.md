@@ -30,42 +30,48 @@ A PHP web application for maintaining collage Library...
     <td>varchar(100)</td>
     <td>No</td>
     <td>student</td>
-    <td>''</td>
+    <td></td>
   </tr>
   <tr>
     <td>username </td>
     <td>varchar(100)</td>
     <td>No</td>
     <td>None</td>
+    <td></td>
   </tr>
     <tr>
     <td>password </td>
     <td>text</td>
     <td>Yes</td>
     <td>None</td>
+    <td></td>
   </tr>
     <tr>
     <td>firstname </td>
     <td>text</td>
     <td>Yes</td>
     <td>None</td>
+    <td></td>
   </tr>
     <tr>
     <td>lastname</td>
     <td>text</td>
     <td>Yes</td>
     <td>None</td>
+    <td></td>
   </tr>
     <tr>
     <td>email</td>
     <td>varchar(150)</td>
     <td>Yes</td>
     <td>None</td>
+    <td></td>
   </tr>
     <tr>
     <td>mobile </td>
     <td>varchar(100)</td>
     <td>Yes</td>
     <td>None</td>
+    <td></td>
   </tr>
 </table>
