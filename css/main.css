@@ -5,8 +5,6 @@
 	
 }
 
-
-
 body{
   background-color:#220901;
   background-image: url("../images/bg.jpg");
@@ -15,20 +13,25 @@ body{
   background-size:cover;
   color: #fff;
   margin: 20px 20px;
-  text-align:center;
 }
-
+.maintitle{
+	
+	text-align:center;
+	
+}
 header{
 	font-family: bungee, sans-serif;
 	text-align: center;
 	color:#ffc857;
-	margin:3px;
+	margin:0px;
+	padding:0px 0px;
 	
 }
 
 
 article{
 	text-align: center;
+	float:center;
 	
 }
 
@@ -36,7 +39,6 @@ footer{
 	
 	text-align: center;
 	color:#ffe1a8;
-	
 }
 
 button,a{ 
@@ -78,5 +80,21 @@ button,a{
 	line-height: 20px;
 	font-size:1em;
 	
+}
+table,td,tr,th{
+	padding:10px;
+	margin:5px 5px;
+	line-height: 20px;
+	font-size:1em;
+	background: #031926;
+	color:#ffe1a8;
+	border: 2px solid #ffc857;
+	border-collapse:collapse;
 	
+}
+th{
+	color:#ffc857;
+	text-align: center;
+	font-size:0.9em;
+	font-family: bungee, sans-serif;
 }
