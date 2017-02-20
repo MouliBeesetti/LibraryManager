@@ -10,12 +10,15 @@
 
 	
 
-	<header>
+<header>
 	<h1 id = "maintitle">
 	Welcome to Library Manager
 	</h1>
-	</header>
-	<article>
+</header>
+<article>
+    <aside>
+
+    </aside>
 		<div class="formbg">
 			<form method= "post" action="index.php" enctype="multipart/form-data" autocomplete="off">
 				<input type = "varchar" name= "username" placeholder="Username"><br/>
@@ -34,14 +37,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $username = $_POST["username"];
 $password = $_POST["password"];
 mysqli_set_charset( $conn, 'utf8');
-$query = "SELECT password FROM users WHERE username='$username'";
+$query = "SELECT password,userlevel FROM users WHERE username='$username'";
 $result = mysqli_query($conn,$query);
 $row = mysqli_fetch_array($result);
 $hashed_password = $row['password'];
+$userlevel = $row['userlevel'];
 
 if(password_verify($password,$hashed_password)){	
+if($userlevel == "student"){
 	
 	echo "Login Sucecessful!";
+	header("Location: student.php");
+	die();	
+}else if($userlevel == "admin" ){
+	
+	echo "Login Sucecessful!";
+	header("Location: admin.php");
+	die();
+	
+	
+}
+else if($userlevel == "staff"){
+	
+	echo "Login Sucecessful!";
+	header("Location: staff.php");
+	die();
+	
+}else{
+	
+	echo "Invalid User Type!";
+	die();
+}
 }else{
 	
 	echo "Please check username and password!";
@@ -53,9 +79,6 @@ mysqli_close($conn);
 ?>
 	</div>
     </article>
-    <aside>
-
-    </aside>
 	<footer>
 	<?php	
 		include("links.php");	
