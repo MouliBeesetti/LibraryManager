@@ -86,15 +86,16 @@ table,td,tr,th{
 	margin:5px 5px;
 	line-height: 20px;
 	font-size:1em;
-	background: #031926;
-	color:#ffe1a8;
-	border: 2px solid #ffc857;
+	background: #757575;
+	color:#FBFBFF;
+	border: 2px solid #FBFBFF;
 	border-collapse:collapse;
 	
 }
 th{
-	color:#ffc857;
+	color:#01BAEF;
 	text-align: center;
 	font-size:0.9em;
 	font-family: bungee, sans-serif;
+	background: #0B4F6C;
 }
