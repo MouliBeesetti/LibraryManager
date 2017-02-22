@@ -27,7 +27,7 @@ A PHP web application for maintaining collage Library...
   </tr>
   <tr>
     <td>userlevel </td>
-    <td>varchar(100)</td>
+    <td>varchar(40)</td>
     <td>No</td>
     <td>student</td>
     <td></td>
@@ -69,7 +69,14 @@ A PHP web application for maintaining collage Library...
   </tr>
     <tr>
     <td>mobile </td>
-    <td>varchar(100)</td>
+    <td>varchar(15)</td>
+    <td>Yes</td>
+    <td>None</td>
+    <td></td>
+  </tr>
+      <tr>
+    <td>avtar </td>
+    <td>varchar(150)</td>
     <td>Yes</td>
     <td>None</td>
     <td></td>
