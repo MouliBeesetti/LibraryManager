@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color:#220901;
+  background-color:#031926;
   background-image: url("../images/bg.jpg");
   background-repeat:no-repeat;
   background-position:center top;
@@ -19,6 +19,7 @@ body{
 	text-align:center;
 	
 }
+
 header{
 	font-family: bungee, sans-serif;
 	text-align: center;
@@ -42,9 +43,9 @@ footer{
 }
 
 button,a{ 
+	display:inline-block;
 	text-decoration: none;
 	width:80px;
-	border-radius: 4px;
 	margin: 10px 5px;
 	background: #e26d5c;
 	color:#ffe1a8;
@@ -56,15 +57,21 @@ button,a{
 	font-size:0.875em;
 	cursor:pointer;
 	text-align:center;
+	outline:0px;
 	
 }
 
+a{
+	
+min-width:80px;	
+	
+}
 .formbg{
 	display: inline-block;
 	background: rgba(202, 204, 164, 0.8);
 	margin: 10px;
 	padding:20px;
-	width:250px;
+	width:280px;
 	border-radius: 12px;
 	text-align: center;
 	border: 8px inset #031926;
@@ -76,11 +83,15 @@ button,a{
 	margin:5px;
 	border-radius: 5px;
 	display: inline-block;
-	vertical-align: middle;
 	line-height: 20px;
 	font-size:1em;
-	
+	width:240px;
 }
+
+.avatar {
+ margin: 10px 0 20px 0;
+}
+
 table,td,tr,th{
 	padding:10px;
 	margin:5px 5px;
@@ -98,4 +109,8 @@ th{
 	font-size:0.9em;
 	font-family: bungee, sans-serif;
 	background: #0B4F6C;
+}
+.signup a{
+	
+	width:100px;
 }
