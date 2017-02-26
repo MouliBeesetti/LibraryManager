@@ -70,8 +70,9 @@ mysqli_close($conn);
 			<input type = "text" name= "lastname" placeholder="Last Name" required><br/>
 			<input type = "email" name= "email" placeholder="Email ID" required ><br/>
 			<input type = "varchar" name= "mobile" placeholder="Mobile No" required ><br/>
-			<div class="avatar"><label>Select your avatar: </label><input type="file" name="avatar" accept="image/*" required /></div>
-			<div class="signup"><button type = "submit" value="submit">Sign up</button>&nbsp </div>
+			<label>Select your avatar: </label>
+			<input class="noborder" type="file" name="avatar" accept="image/*" required />
+			<button type = "submit" value="submit">Sign up</button>&nbsp
 			<div class="alert"><?= $_SESSION['message'] ?></div>
 </form>
 </div>
