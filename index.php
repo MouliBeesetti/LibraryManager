@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Library Manager</title>
 	<link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
     </aside>
 		<div class="formbg">
 			<form method= "post" action="index.php" enctype="multipart/form-data" autocomplete="off">
-				<input type = "varchar" name= "username" placeholder="Username"><br/>
+				<input type = "text" name= "username" placeholder="Username"><br/>
 				<input type = "password" name= "password" placeholder="Password"><br/>
 				<button name = "login" type = "submit">Login</button>&nbsp
 				<a href="signup.php">New User?</a>&nbsp
