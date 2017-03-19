@@ -5,8 +5,8 @@
 //connection parameters
 $servername = "localhost";
 $server_username = "root";
-$server_password = "mouli";
-$server_database = "mouli";
+$server_password = "";
+$server_database = "users";
 
 //setting connection
 $conn = new mysqli($servername, $server_username, $server_password,$server_database);
