@@ -16,18 +16,20 @@ $lastname = mysqli_real_escape_string($conn,$_POST["lastname"]);
 $email = $_POST["email"];
 $mobile = $_POST["mobile"];
 $hased_password = password_hash($password,PASSWORD_DEFAULT);
-$avatar_path = mysqli_real_escape_string($conn,('images/avtars/'.$_FILES['avatar']['name']));
+if($password == $confirmpassword ){
 
 if (preg_match("!image!",$_FILES['avatar']['type'])) {
-            	
-	
-if($password == $confirmpassword ){
+    $explode = explode('.', $_FILES["avatar"]["name"]);
+    $ext = end($explode);
+    $imageName = $username .'.'. $ext;
+    $imagePath = "images/userPhotos/" . $imageName;
 	//mysql query
 	//mysqli_set_charset( $conn, 'utf8');
-if($result = $conn->real_query("INSERT INTO users(username,password,firstname,lastname,email,mobile,avtar) VALUES('$username','$hased_password','$firstname','$lastname','$email','$mobile','$avatar_path')")){
-	//copy image to images/ folder 
-if (copy($_FILES['avatar']['tmp_name'], $avatar_path)){
-	$_SESSION['message'] = 'Sucessfully Registered!';	
+    $query = "INSERT INTO users(username,password,firstname,lastname,email,mobile,avtar) VALUES('$username','$hased_password','$firstname','$lastname','$email','$mobile','$imagePath')";
+    if($result =  mysqli_query($conn,$query)){
+    //copy image to images/ folder
+if (copy($_FILES['avatar']['tmp_name'], $imagePath)){
+	$_SESSION['message'] = 'Sucessfully Registered!';
 	}else {
         $_SESSION['message'] = 'File upload failed!';
       }
@@ -38,13 +40,14 @@ if (copy($_FILES['avatar']['tmp_name'], $avatar_path)){
 	
 }
 else {
-	$_SESSION['message'] = 'Password and Confirm password doesn\'t match!';
+    $_SESSION['message'] = 'Please only upload GIF, JPG or PNG images!';
+
 }
+}else {
+    $_SESSION['message'] = 'Password and Confirm password doesn\'t match!';
+      }
 session_destroy();
 mysqli_close($conn);
-}else {
-        $_SESSION['message'] = 'Please only upload GIF, JPG or PNG images!';
-      }
 }
 ?>
 <html>
@@ -70,7 +73,7 @@ mysqli_close($conn);
 			<input type = "text" name= "lastname" placeholder="Last Name" required><br/>
 			<input type = "email" name= "email" placeholder="Email ID" required ><br/>
 			<input type = "number" name= "mobile" placeholder="Mobile No"><br/>
-			<label>Select your avatar: </label>
+			<label>Select your Photo : </label>
 			<input class="noborder" type="file" name="avatar" accept="image/*" required />
 			<button type = "submit" value="submit">Sign up</button>&nbsp
             		<button type="reset">Reset</button>&nbsp
