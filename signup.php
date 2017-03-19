@@ -73,8 +73,8 @@ mysqli_close($conn);
 			<label>Select your avatar: </label>
 			<input class="noborder" type="file" name="avatar" accept="image/*" required />
 			<button type = "submit" value="submit">Sign up</button>&nbsp
-            <button type="reset">Reset</button>
-            <div class="alert"><?= $_SESSION['message'] ?></div>
+            		<button type="reset">Reset</button>&nbsp
+            		<div class="alert"><?= $_SESSION['message'] ?></div>
 
 </form>
 </div>
