@@ -29,7 +29,7 @@ if (preg_match("!image!",$_FILES['avatar']['type'])) {
     if($result =  mysqli_query($conn,$query)){
     //copy image to images/ folder
 if (copy($_FILES['avatar']['tmp_name'], $imagePath)){
-	$_SESSION['message'] = 'Sucessfully Registered!';
+	$_SESSION['message'] = 'Successfully Registered!';
 	}else {
         $_SESSION['message'] = 'File upload failed!';
       }
@@ -40,7 +40,7 @@ if (copy($_FILES['avatar']['tmp_name'], $imagePath)){
 	
 }
 else {
-    $_SESSION['message'] = 'Please only upload GIF, JPG or PNG images!';
+    $_SESSION['message'] = 'Please upload GIF, JPG or PNG images only! ';
 
 }
 }else {
@@ -76,8 +76,8 @@ mysqli_close($conn);
 			<label>Select your Photo : </label>
 			<input class="noborder" type="file" name="avatar" accept="image/*" required />
 			<button type = "submit" value="submit">Sign up</button>&nbsp
-            		<button type="reset">Reset</button>&nbsp
-            		<div class="alert"><?= $_SESSION['message'] ?></div>
+            <button type="reset">Reset</button>&nbsp
+            <div class="alert"><?= $_SESSION['message'] ?></div>
 
 </form>
 </div>
