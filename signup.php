@@ -72,7 +72,7 @@ mysqli_close($conn);
 			<input type = "number" name= "mobile" placeholder="Mobile No"><br/>
 			<label>Select your avatar: </label>
 			<input class="noborder" type="file" name="avatar" accept="image/*" required />
-            <input type="reset">
+            		<input type="reset">
 			<button type = "submit" value="submit">Sign up</button>&nbsp
 			<div class="alert"><?= $_SESSION['message'] ?></div>
 
