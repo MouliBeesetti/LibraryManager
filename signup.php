@@ -63,13 +63,13 @@ mysqli_close($conn);
 <article>
 <div class="formbg">
 <form action="signup.php" method="post" enctype="multipart/form-data" autocomplete="off" >
-			<input type = "varchar" name= "username" placeholder="Username" required><br/>
+			<input type = "text" name= "username" placeholder="Username" required><br/>
 			<input type = "password" name= "password" placeholder="Password" required><br/>
 			<input type = "password" name= "confirmpassword" placeholder="Confirm Password" required><br/>
 			<input type = "text" name= "firstname" placeholder="First Name" required><br/>
 			<input type = "text" name= "lastname" placeholder="Last Name" required><br/>
 			<input type = "email" name= "email" placeholder="Email ID" required ><br/>
-			<input type = "varchar" name= "mobile" placeholder="Mobile No" required ><br/>
+			<input type = "text" name= "mobile" placeholder="Mobile No" required ><br/>
 			<label>Select your avatar: </label>
 			<input class="noborder" type="file" name="avatar" accept="image/*" required />
 			<button type = "submit" value="submit">Sign up</button>&nbsp
