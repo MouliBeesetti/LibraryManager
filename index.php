@@ -47,12 +47,12 @@ $userlevel = $row['userlevel'];
 if(password_verify($password,$hashed_password)){	
 if($userlevel == "student"){
 	
-	echo "Login Sucecessful!";
+	echo "Login Successful!";
 	header("Location: student.php");
 	die();	
 }else if($userlevel == "admin" ){
 	
-	echo "Login Sucecessful!";
+	echo "Login Successful!";
 	header("Location: admin.php");
 	die();
 	
@@ -60,7 +60,7 @@ if($userlevel == "student"){
 }
 else if($userlevel == "staff"){
 	
-	echo "Login Sucecessful!";
+	echo "Login Successful!";
 	header("Location: staff.php");
 	die();
 	
